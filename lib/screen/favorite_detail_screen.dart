@@ -9,7 +9,7 @@ class FavoriteDetailScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final detailData = ref.read(providerFavoritePlace.notifier).getDetailData(id);
+    final detailData = ref.read(favoritePlaceProvider.notifier).getDetailData(id);
     return Scaffold(
       appBar: AppBar(
         title: Text(detailData.title),
