@@ -21,8 +21,14 @@ class PlaceItem extends StatelessWidget {
           itemBuilder: (context, index) => ListTile(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) => FavoriteDetailScreen(
-                  id: places[index].id)));
+                  place: places[index])
+              )
+              );
             },
+            leading: CircleAvatar(
+                radius: 26,
+                backgroundImage: FileImage(places[index].image),
+              ),
             title: Text(
               places[index].title,
               style: Theme.of(context).textTheme.titleMedium!.copyWith(

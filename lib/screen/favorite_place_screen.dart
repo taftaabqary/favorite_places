@@ -24,7 +24,12 @@ class FavoritePlaceScreen extends ConsumerWidget {
           )
         ],
       ),
-      body: PlaceItem(places: favoritePlaces)
+      body: Padding(
+        padding: const EdgeInsets.all(8),
+        child: PlaceItem(
+            places: favoritePlaces
+        ),
+      )
     );
   }
 }
